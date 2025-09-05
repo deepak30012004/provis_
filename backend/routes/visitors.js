@@ -10,11 +10,11 @@ const ratelimiter = require('../middleware/ratelimiter');
 
 const transport= require('../mailer');
 
-const redis=require('redis');
+// const redis=require('redis');
 
-const redisclient=redis.createClient();
+// const redisclient=redis.createClient();
 
-redisclient.connect().then(()=> console.log('redisconnected'));
+// redisclient.connect().then(()=> console.log('redisconnected'));
 
 
 
