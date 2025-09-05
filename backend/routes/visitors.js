@@ -44,7 +44,7 @@ router.post('/addvisitor',ratelimiter,verifyauth,verifyrole('staff') ,async (req
       
             await pool.query('INSERT INTO visitor (name, ward,purpose, email,security) VALUES (?, ?,?, ?, ?)', [name,ward, visitp, email,security]);
                 // io.emit('newVisitor',{name});
-               await redisclient.del('vis');
+               // await redisclient.del('vis');
              return res.status(201).json({ message: 'Visitor checked in successfully' });
         } catch (error) {
             console.error('Error checking in visitor:', error);
